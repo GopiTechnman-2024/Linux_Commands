@@ -1,0 +1,89 @@
+
+What are Linux Distributions? What different type of Linux Distributions are most popular?
+A Linux distribution is an OS made through a software collection that contains the Linux kernel and a package management system often.
+Some popular linux distributions :
+Distribution	Why To Use
+UBuntu	It works like Mac OS and easy to use.
+Linux mint	It works like windows and should be use by new comers.
+Debian	It provides stability but not recommended to a new user.
+Fedora	If you want to use red hat and latest software.
+Red hat enterprise	To be used commercially.
+CentOS	If you want to use red hat but without its trademark.
+OpenSUSE	It works same as Fedora but slightly older and more stable.
+Arch Linux	It is not for the beginners because every package has to be installed by yourself.
+
+What is the advantages of using Linux systems as servers?
+It offers a cost-effective solution:
+ This can significantly reduce the cost of setting up and maintaining a server hashtag#infrastructure or web hosting environment.
+It brings in stability and offers reliable solutions:
+Ex. Linux, less prone to crashes and other failures
+It is known for offering unmatched flexibility:
+ This can be especially beneficial for web hosting providers who need to offer a range of services to clients. 
+It brings in a great degree of security and scalability.
+
+You need to check the current memory usage and running processes on your server. Which command will you use?
+Top
+
+You suspect a service is not running. How do you check the status of the nginx service?
+systemctl status nginx
+This command provides detailed information about the status of the Nginx service, including whether it's running or not. If the service is active, you should see output indicating that it is running.
+You need to view the last 100 lines of a log file located at /var/log/. What command do you use?
+tail -n 100 /var/log/your_log_file
+
+You suspect an error occurred around 4:00 AM. How do you search for the keyword "error" in a log file during that time?
+grep "error" /var/log/your_log_file | awk '$0 >= "your_date 04:00:00" && $0 <= "your_date 04:59:59"'
+
+   How to append more content in the end of a file?
+cat >> file_name
+$ Hello, Gopi
+How to quickly view the content of a file.?
+cat file_name
+How to delete a directory having few files into it?
+ rm -r directory_name
+Use vi editor and understand interactive and command mode.
+
+How to kill a process running on a particular port 8080 ?
+
+lsof -i 8080
+kill PID
+how to check all the processes running on what ports?
+We can user either netstat or lsof
+lsof -i
+How to change the permissions of a file such as Execute and Read for All type users and guest?
+chmod 555 filename (I have explained in previous file)
+How to change the permissions of a file such as read only for others and read write for users and guest?
+chmod 664 filename
+how to provide all the permissions to all the users?
+chmod -R 777 directory
+how to run a process in the background or as a background process?
+how to find where a particular a file resides syslog-22011994.log ?
+find /  -name "syslog-22011994.log" 
+
+How to find where a particular application is installed such as Docker, Python, Java?
+which python
+
+How to provide\change system variables of linux?
+Define and print variable:
+Define the variable JAVA_HOME: 
+$ export JAVA_HOME=/usr/bin/java
+Verify by listing it:
+$env
+
+What is sudo?
+-          sudo is a command in Unix-like operating systems that allows authorized users to execute commands with elevated privileges. It enables users to perform administrative tasks without logging in as the root user, enhancing security and control over system changes.
+     21) Why do we use sudo?
+            -             Use sudo to execute commands with elevated privileges, enabling users to perform administrative tasks securely without needing to log in as the root user. It enhances security, provides fine-grained control over permissions, and logs command activities.
+    22) How do you display all current network connections and listening ports?
+              -             Display All Connections (both listening and established):
+                            Bash 
+                            netstat -a
+        Display Listening Ports:
+        Bash
+        netstat -i
+23)  You need to test the network connectivity to an external server, say http://google.com . What command do you use?
+           -            ping www.google.com
+24) You want to compare the content of two text files file1.txt and file2.txt. Which command do you use?
+- cmp file1.txt file2.txt
+- If the files are identical, this command will produce no output. If there are differences, it will display the byte and line numbers where the first difference occurs.
+
+
